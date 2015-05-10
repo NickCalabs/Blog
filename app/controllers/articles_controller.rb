@@ -23,7 +23,7 @@ class ArticlesController < ApplicationController
 	def destroy
 		@article = Article.find(params[:id])
 		@article.destroy
-		redirect_to article_path(:index) #this is wrong
+		redirect_to article_path('articles#index') #this is wrong
 	end
 
 	def edit
